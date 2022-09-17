@@ -1,13 +1,26 @@
 {
   "name": "vitari-trading",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Vitari Trading is an enterprise app built with Node.js and Typescript using Domain Driven Design, this projecto was inspired by Vinyl-Trading written by Khalil Stember",
+  "main": "bin/www",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf ./dist && tsc",
+    "db:create:dev": "cross-env NODE_ENV=development node scripts/db/create",
+    "db:create:test": "cross-env NODE_ENV=test node scripts/db/create",
+    "db:delete:dev": "cross-env NODE_ENV=development node scripts/db/delete",
+    "db:delete:test": "cross-env NODE_ENV=test node scripts/db/delete",
+    "db:flush:dev": "cross-env NODE_ENV=development npm run db:delete:dev && npm run db:create:dev",
+    "db:flush:test": "cross-env NODE_ENV=test npm run db:delete:test && npm run db:create:test",
+    "migrate:dev": "npm run build && cross-env NODE_ENV=development dotenv -e .env sequelize db:migrate",
+    "migrate:test": "npm run build && cross-env NODE_ENV=test dotenv -e .env sequelize db:migrate --env test",
+    "migrate:prod": "npm run build && cross-env NODE_ENV=production dotenv -e .env sequelize db:migrate --env production",
+    "start:dev": "cross-env NODE_ENV=development nodemon",
+    "test": "jest",
+    "test:dev": "jest --watchAll",
+    "testWithCoverage": "jest --coverage"
   },
   "keywords": [],
-  "author": "",
+  "author": "José Tandavala",
   "license": "ISC",
   "devDependencies": {
     "@types/bcrypt-nodejs": "^0.0.31",
