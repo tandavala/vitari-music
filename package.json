@@ -1,7 +1,7 @@
 {
   "name": "vitari-trading",
   "version": "1.0.0",
-  "description": "Vitari Trading is an enterprise app built with Node.js and Typescript using Domain Driven Design, this projecto was inspired by Vinyl-Trading written by Khalil Stember",
+  "description": "Vitari Trading is an enterprise app built with Node.js and Typescript using Domain Driven Design, this project was inspired by white-label written by Khalil Stember",
   "main": "bin/www",
   "scripts": {
     "build": "rimraf ./dist && tsc",
