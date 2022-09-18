@@ -31,6 +31,19 @@ export class Guard {
     return { succeeded: true };
   }
 
+  public static againstNullOrUndefinedBulk(
+    args: GuardArgumentCollection
+  ): IGuardResult {
+    for (let arg of args) {
+      const result = this.againstNullOrUndefined(
+        arg.argument,
+        arg.argumentName
+      );
+      if (!result.succeeded) return result;
+    }
+    return { succeeded: true };
+  }
+
   public static isOneOf(
     value: any,
     validValues: any[],
