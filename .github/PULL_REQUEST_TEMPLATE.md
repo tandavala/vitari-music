@@ -5,3 +5,4 @@
 - [ ] Documentation
 - [ ] Work in progress
 - [ ] Chore
+- [ ] deploy to main
