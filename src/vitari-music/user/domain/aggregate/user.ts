@@ -12,11 +12,11 @@ interface UserProps {
   lastName: string;
   email: UserEmail;
   password: UserPassword;
-  isEmailVerified: boolean;
+  isEmailVerified?: boolean;
   profilePicture?: string;
   googleId?: number;
   facebookId?: number;
-  username: string;
+  username?: string;
 }
 export class User extends AggregateRoot<UserProps> {
   get id(): UniqueEntityId {

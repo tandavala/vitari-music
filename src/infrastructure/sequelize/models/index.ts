@@ -10,7 +10,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import config from "../config/config";
-import * as Sequelize from "sequelize";
+import Sequelize from "sequelize";
 
 const sequelize = config.connection;
 

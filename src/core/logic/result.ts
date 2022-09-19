@@ -1,6 +1,6 @@
 export class Result<T> {
   public isSuccess: boolean;
-  private isFailure: boolean;
+  public isFailure: boolean;
   public error: T | string;
   private _value: T;
 
@@ -36,6 +36,13 @@ export class Result<T> {
 
   public static fail<U>(error: any): Result<U> {
     return new Result<U>(false, error);
+  }
+
+  public static combine(results: Result<any>[]): Result<any> {
+    for (let result of results) {
+      if (result.isFailure) return result;
+    }
+    return Result.ok();
   }
 }
 

@@ -78,8 +78,8 @@ export abstract class BaseController {
     return BaseController.jsonResponse(this.res, 400, "TODO");
   }
 
-  public fail(error: Error | string) {
+  public fail(error) {
     console.log(error);
-    return this.res.status(500).json({ message: error.toString() });
+    return this.res.status(500).json({ message: error });
   }
 }
