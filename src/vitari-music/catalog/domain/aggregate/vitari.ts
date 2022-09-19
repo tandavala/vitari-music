@@ -1,7 +1,7 @@
 import { AggregateRoot } from "../../../../core/domain/entity/aggregateRoot";
 import { UniqueEntityId } from "../../../../core/domain/value-objects/uniqueEntityId";
-import { Guard } from "../../../../core/guard";
-import { Result } from "../../../../core/result";
+import { Guard } from "../../../../core/logic/guard";
+import { Result } from "../../../../core/logic/result";
 import { TraderId } from "../../../trading/domain/value-object/traderId";
 import { VitariCreatedEvent } from "../event/vitari-created-event";
 import { VitariNotes } from "../value-object/vitari-note";

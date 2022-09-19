@@ -1,7 +1,7 @@
 import { AggregateRoot } from "../../../../core/domain/entity/aggregateRoot";
 import { UniqueEntityId } from "../../../../core/domain/value-objects/uniqueEntityId";
-import { Guard } from "../../../../core/guard";
-import { Result } from "../../../../core/result";
+import { Guard } from "../../../../core/logic/guard";
+import { Result } from "../../../../core/logic/result";
 import { UserCreatedEvent } from "../event/user-created-event";
 import { UserEmail } from "../value-object/user-email";
 import { UserPassword } from "../value-object/user-password";

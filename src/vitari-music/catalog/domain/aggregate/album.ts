@@ -1,7 +1,7 @@
 import { Entity } from "../../../../core/domain/entity/entity";
 import { UniqueEntityId } from "../../../../core/domain/value-objects/uniqueEntityId";
-import { Guard } from "../../../../core/guard";
-import { Result } from "../../../../core/result";
+import { Guard } from "../../../../core/logic/guard";
+import { Result } from "../../../../core/logic/result";
 import { AlbumId } from "../value-object/albumId";
 import { ArtistId } from "../value-object/artistId";
 import { Genre } from "./genre";

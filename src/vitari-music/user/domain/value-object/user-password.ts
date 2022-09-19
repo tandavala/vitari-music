@@ -1,7 +1,7 @@
 import * as bcrypt from "bcrypt-nodejs";
 import { ValueObject } from "../../../../core/domain/value-objects/valueObject";
-import { Guard } from "../../../../core/guard";
-import { Result } from "../../../../core/result";
+import { Guard } from "../../../../core/logic/guard";
+import { Result } from "../../../../core/logic/result";
 
 interface UserPasswordProps {
   value: string;

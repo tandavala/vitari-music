@@ -1,5 +1,5 @@
 import { ValueObject } from "../../../../core/domain/value-objects/valueObject";
-import { Result } from "../../../../core/result";
+import { Result } from "../../../../core/logic/result";
 
 interface ArtistNameProps {
   value: string;

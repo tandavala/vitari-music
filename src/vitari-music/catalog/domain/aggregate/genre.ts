@@ -1,6 +1,6 @@
 import { Entity } from "../../../../core/domain/entity/entity";
 import { UniqueEntityId } from "../../../../core/domain/value-objects/uniqueEntityId";
-import { Result } from "../../../../core/result";
+import { Result } from "../../../../core/logic/result";
 import { GenreId } from "../value-object/genreId";
 
 interface GenreProps {

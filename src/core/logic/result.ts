@@ -1,5 +1,3 @@
-import { LOCK } from "sequelize";
-
 export class Result<T> {
   public isSuccess: boolean;
   private isFailure: boolean;
